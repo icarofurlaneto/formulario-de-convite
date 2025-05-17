@@ -1,0 +1,19 @@
+.h2 {
+    font: var(--heading-md);
+    color: var(--text-heading);
+}
+
+.heading-sm {
+    font: var(--heading-sm);
+    color: var(--text-heading);
+}
+
+.body-sm {
+    font: var(--body-md);
+    color: var(--text-body);
+}
+
+.input-placeholder {
+    font: var(--body-md);
+    color: var(--input-placeholder);
+}

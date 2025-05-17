@@ -1,0 +1,25 @@
+/* Media queries para controlar os limites do aside */
+@media (max-width: 768px) {
+    #app {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh auto;
+        height: auto;
+        overflow: auto;
+    }
+    
+    aside {
+        min-height: 100vh;
+        height: 100vh;
+    }
+    
+    main {
+        margin-top: 2rem;
+    }
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    #event-form {
+        grid-template-columns: 1fr;
+    }
+}

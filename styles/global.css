@@ -16,5 +16,14 @@
     --body-sm: 400 0.875rem/normal var(--font-family-1);
     --body-xs: 400 0.75rem/normal var(--font-family-1);
 
-        background-color: black;
+    background-color: black;
+    --shape-background: #131516;
+    --shape-body: #212427;
+    --pink: #FF598B;
+    --text-heading: #F9F9F9;
+    --text-body: #C8CDD0;
+    --input-placeholder: #869198;
+    --input-base: #1C1F21;
+    --input-stroke: #363B40;
+    --brand-light: #59B2FF;
 }

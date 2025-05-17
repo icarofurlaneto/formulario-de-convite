@@ -16,8 +16,8 @@
     <div id="app">
       <aside>
         <div class="aside-container">
+          <div class="background"></div>
           <header>
-            <div class="background"></div>
             <div class="logo">
               <img src="assets/icons/Logo.svg" alt="Festivite Logo" />
             </div>
@@ -27,7 +27,63 @@
         </div>
       </aside>
       <main>
-        <div class="main-container">fsfks</div>
+        <div class="main-container">
+          <div class="main-content">
+            <h2 class="h2">Crie seu convite</h2>
+            <form id="event-form">
+            <span>
+              <img src="assets/icons/calendar.svg" alt="Ícone de calendário">
+              <span class="heading-sm">Sobre o evento</span>
+            </span>
+              <div class="input-group full-width">
+                <label class="body-sm" for="event-name">Título</label>
+                <input type="text" id="event-name" placeholder="Nome do evento" required />
+              </div>
+              
+              <div class="input-group">
+                <label class="body-sm" for="event-date">Início</label>
+                <input type="datetime-local" id="event-date" required />
+              </div>
+              
+              <div class="input-group">
+                <label class="body-sm" for="event-time">Fim</label>
+                <input type="datetime-local" id="event-time" required />
+              </div>
+              
+              <div class="input-group">
+                <label class="body-sm" for="event-location">Tipo</label>
+                <div class="toggle-options">
+                  <label class="option-label">
+                    <input type="radio" name="event-type" value="presencial" checked />
+                    <span class="option-item">
+                      <img src="assets/icons/building-2.svg" alt="Ícone presencial" class="option-icon" />
+                      <span>Presencial</span>
+                    </span>
+                  </label>
+                  <label class="option-label">
+                    <input type="radio" name="event-type" value="online" />
+                    <span class="option-item">
+                      <img src="assets/icons/video.svg" alt="Ícone online" class="option-icon" />
+                      <span>Online</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="input-group">
+                <label class="body-sm" for="event-host">Local</label>
+                <input type="text" id="event-host" placeholder="Link ou endereço" />
+              </div>
+              
+              <div class="input-group full-width">
+                <label class="body-sm" for="event-description">Descrição</label>
+                <textarea id="event-description" placeholder="Detalhes adicionais sobre o evento" rows="3"></textarea>
+              </div>
+              
+              <button type="submit" class="full-width">Criar convite</button>
+            </form>
+          </div>
+        </div>
       </main>
     </div>
   </body>
