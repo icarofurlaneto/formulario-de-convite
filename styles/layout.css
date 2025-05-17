@@ -1,0 +1,67 @@
+#app {
+    display: grid;
+    grid-template-columns: 440px 1fr;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #131516;
+}
+
+aside {
+    height: 100%;
+    width: 100%;
+
+    & .aside-container {
+
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }    & .background {
+        position: absolute;
+        top: 1.25rem;
+        left: 1.25rem;
+        background-image: url('../assets/images/Background.png');
+        background-size: cover;
+        background-position: center;
+        height: calc(100% - 2.5rem);
+        width: calc(100% - 2.5rem);
+        border-radius: 12px;
+        z-index: 1;
+    }
+
+    & header {
+        
+    }
+    
+    & .logo, & h1, & span {
+        position: relative;
+        z-index: 2;
+        color: white;
+    }
+    
+    & .logo {
+        margin-bottom: 1.5rem;
+
+        & img {
+            height: 48px;
+        }
+    }
+    
+    & h1 {
+        font: var(--logo);
+        margin-bottom: 0.5rem;
+    }
+    
+    & span {
+        font: var(--body-md);
+    }
+}
+
+main {
+
+    & .main-container {
+    }
+}
+
