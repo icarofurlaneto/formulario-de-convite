@@ -3,12 +3,13 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 
-    & > span {
+    & .about-event {
         grid-column: 1 / -1;
         display: flex;
         align-items: center;
         gap: 0.5rem;
-
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         
         & img {
             width: 1.5rem;
@@ -19,6 +20,16 @@
             color: var(--text-heading);
         }
     }
+}
+
+form {
+    display: grid;
+    gap: 1.5rem;
+}
+    
+/* Adiciona margem especial para a seção "Detalhes do convite" */
+.section-details {
+    margin-top: 2.5rem;
 }
 
 /* Elementos que ocupam a largura total */
@@ -53,6 +64,21 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"] {
     color: var(--input-placeholder);
+}
+
+/* Estilos para input de tipo color */
+input[type="color"] {
+    height: 3rem;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 6px;
 }
 
 /* Placeholders para inputs de data e hora */
@@ -160,5 +186,61 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #5a52e0;
+}
+
+.grid-theme {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+}
+
+.theme-item {
+    cursor: pointer;
+    position: relative;
+    background-color: var(--shape-button);
+    border-radius: 8px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        padding: 0.25rem 0.25rem 0.5rem;
+    }
+
+    & span {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 0 0.25rem 0.5rem;
+    }
+}
+
+.theme-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.theme-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-item:hover {
+    background-color: var(--shape-hover);
+    transition: all 0.2s ease;
+}
+
+.theme-item input[type="radio"]:checked + .theme-content {
+    border: 2px solid var(--brand-light);
+    border-radius: 6px;
 }
 

@@ -30,56 +30,320 @@
         <div class="main-container">
           <div class="main-content">
             <h2 class="h2">Crie seu convite</h2>
-            <form id="event-form">
-            <span>
-              <img src="assets/icons/calendar.svg" alt="Ícone de calendário">
-              <span class="heading-sm">Sobre o evento</span>
-            </span>
+            <form>
+              <div id="event-form">
+                <div class="about-event">
+                  <img
+                    src="assets/icons/calendar.svg"
+                    alt="Ícone de calendário"
+                  />
+                  <span class="heading-sm">Sobre o evento</span>
+                </div>
+                <div class="input-group full-width">
+                  <label class="body-sm" for="event-name">Título</label>
+                  <input
+                    type="text"
+                    id="event-name"
+                    placeholder="Nome do evento"
+                    required
+                  />
+                </div>
+
+                <div class="input-group">
+                  <label class="body-sm" for="event-date">Início</label>
+                  <input type="datetime-local" id="event-date" required />
+                </div>
+
+                <div class="input-group">
+                  <label class="body-sm" for="event-time">Fim</label>
+                  <input type="datetime-local" id="event-time" required />
+                </div>
+
+                <div class="input-group">
+                  <label class="body-sm" for="event-location">Tipo</label>
+                  <div class="toggle-options">
+                    <label class="option-label">
+                      <input
+                        type="radio"
+                        name="event-type"
+                        value="presencial"
+                        checked
+                      />
+                      <span class="option-item">
+                        <img
+                          src="assets/icons/building-2.svg"
+                          alt="Ícone presencial"
+                          class="option-icon"
+                        />
+                        <span>Presencial</span>
+                      </span>
+                    </label>
+                    <label class="option-label">
+                      <input type="radio" name="event-type" value="online" />
+                      <span class="option-item">
+                        <img
+                          src="assets/icons/video.svg"
+                          alt="Ícone online"
+                          class="option-icon"
+                        />
+                        <span>Online</span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label class="body-sm" for="event-host">Local</label>
+                  <input
+                    type="text"
+                    id="event-host"
+                    placeholder="Link ou endereço"
+                  />
+                </div>
+
+                <div class="input-group full-width">
+                  <label class="body-sm" for="event-description"
+                    >Descrição</label
+                  >
+                  <textarea
+                    id="event-description"
+                    placeholder="Detalhes adicionais sobre o evento"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Segunda seção do formulário -->
+              <div class="about-event section-details">
+                <img
+                  src="assets/icons/paintbrush-vertical.svg"
+                  alt="Ícone de convite"
+                />
+                <span class="heading-sm">Personalização</span>
+              </div>
+
               <div class="input-group full-width">
-                <label class="body-sm" for="event-name">Título</label>
-                <input type="text" id="event-name" placeholder="Nome do evento" required />
-              </div>
-              
-              <div class="input-group">
-                <label class="body-sm" for="event-date">Início</label>
-                <input type="datetime-local" id="event-date" required />
-              </div>
-              
-              <div class="input-group">
-                <label class="body-sm" for="event-time">Fim</label>
-                <input type="datetime-local" id="event-time" required />
-              </div>
-              
-              <div class="input-group">
-                <label class="body-sm" for="event-location">Tipo</label>
-                <div class="toggle-options">
-                  <label class="option-label">
-                    <input type="radio" name="event-type" value="presencial" checked />
-                    <span class="option-item">
-                      <img src="assets/icons/building-2.svg" alt="Ícone presencial" class="option-icon" />
-                      <span>Presencial</span>
-                    </span>
+                <label class="body-sm">Cor principal</label>
+                <div class="color-options">
+                  <label class="color-option">
+                    <input
+                      type="radio"
+                      name="theme-color"
+                      value="#FF598B"
+                      checked
+                    />
+                    <span
+                      class="color-button"
+                      style="background-color: #ff598b"
+                    ></span>
                   </label>
-                  <label class="option-label">
-                    <input type="radio" name="event-type" value="online" />
-                    <span class="option-item">
-                      <img src="assets/icons/video.svg" alt="Ícone online" class="option-icon" />
-                      <span>Online</span>
-                    </span>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#FF6B00" />
+                    <span
+                      class="color-button"
+                      style="background-color: #ff6b00"
+                    ></span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#FFC700" />
+                    <span
+                      class="color-button"
+                      style="background-color: #ffc700"
+                    ></span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#59B2FF" />
+                    <span
+                      class="color-button"
+                      style="background-color: #59b2ff"
+                    ></span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#0097B2" />
+                    <span
+                      class="color-button"
+                      style="background-color: #0097b2"
+                    ></span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#0062FF" />
+                    <span
+                      class="color-button"
+                      style="background-color: #0062ff"
+                    ></span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#6C63FF" />
+                    <span
+                      class="color-button"
+                      style="background-color: #6c63ff"
+                    ></span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#8E33FF" />
+                    <span
+                      class="color-button"
+                      style="background-color: #8e33ff"
+                    ></span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#FF3399" />
+                    <span
+                      class="color-button"
+                      style="background-color: #ff3399"
+                    ></span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#7ED957" />
+                    <span
+                      class="color-button"
+                      style="background-color: #7ed957"
+                    ></span>
+                  </label>
+                  <label class="color-option">
+                    <input type="radio" name="theme-color" value="#C4C4C4" />
+                    <span
+                      class="color-button"
+                      style="background-color: #c4c4c4"
+                    ></span>
                   </label>
                 </div>
               </div>
-              
-              <div class="input-group">
-                <label class="body-sm" for="event-host">Local</label>
-                <input type="text" id="event-host" placeholder="Link ou endereço" />
+
+              <div class="theme-fest">
+                <label class="body-sm">Tema do evento</label>
+                <div class="grid-theme">
+                  <label class="theme-item">
+                    <input
+                      type="radio"
+                      name="event-theme"
+                      value="aniversario"
+                      checked
+                    />
+                    <div class="theme-content">
+                      <img
+                        src="assets/images/Image.svg"
+                        alt="Festa de Aniversário"
+                      />
+                      <span class="body-sm">Aniversário</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input type="radio" name="event-theme" value="infantil" />
+                    <div class="theme-content">
+                      <img
+                        src="assets/images/Image (1).svg"
+                        alt="Festa Infantil"
+                      />
+                      <span class="body-sm">Infantil</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input type="radio" name="event-theme" value="formatura" />
+                    <div class="theme-content">
+                      <img src="assets/images/Image (2).svg" alt="Formatura" />
+                      <span class="body-sm">Formatura</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input
+                      type="radio"
+                      name="event-theme"
+                      value="corporativo"
+                    />
+                    <div class="theme-content">
+                      <img src="assets/images/Image (3).svg" alt="Casamento" />
+                      <span class="body-sm">Casamento</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input type="radio" name="event-theme" value="cha_bebe" />
+                    <div class="theme-content">
+                      <img
+                        src="assets/images/Image (4).svg"
+                        alt="Chá de bebê"
+                      />
+                      <span class="body-sm">Chá de bebê</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input type="radio" name="event-theme" value="cha_panela" />
+                    <div class="theme-content">
+                      <img
+                        src="assets/images/Image (5).svg"
+                        alt="Chá de panela"
+                      />
+                      <span class="body-sm">Chá de panela</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input type="radio" name="event-theme" value="carnaval" />
+                    <div class="theme-content">
+                      <img
+                        src="assets/images/Image (6).svg"
+                        alt="Festa de Carnaval"
+                      />
+                      <span class="body-sm">Carnaval</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input type="radio" name="event-theme" value="cha_panela" />
+                    <div class="theme-content">
+                      <img src="assets/images/Image (7).svg" alt="Páscoa" />
+                      <span class="body-sm">Chá de panela</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input type="radio" name="event-theme" value="sao_joao" />
+                    <div class="theme-content">
+                      <img
+                        src="assets/images/Image (8).svg"
+                        alt="Festa de São João"
+                      />
+                      <span class="body-sm">São João</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input type="radio" name="event-theme" value="cha_panela" />
+                    <div class="theme-content">
+                      <img src="assets/images/Image (9).svg" alt="Halloween" />
+                      <span class="body-sm">Halloween</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input type="radio" name="event-theme" value="natal" />
+                    <div class="theme-content">
+                      <img src="assets/images/Image (10).svg" alt="Natal" />
+                      <span class="body-sm">Natal</span>
+                    </div>
+                  </label>
+
+                  <label class="theme-item">
+                    <input
+                      type="radio"
+                      name="event-theme"
+                      value="outra_festa"
+                    />
+                    <div class="theme-content">
+                      <img
+                        src="assets/images/Image (11).svg"
+                        alt="Outra festa"
+                      />
+                      <span class="body-sm">Outro</span>
+                    </div>
+                  </label>
+                </div>
               </div>
-              
-              <div class="input-group full-width">
-                <label class="body-sm" for="event-description">Descrição</label>
-                <textarea id="event-description" placeholder="Detalhes adicionais sobre o evento" rows="3"></textarea>
-              </div>
-              
               <button type="submit" class="full-width">Criar convite</button>
             </form>
           </div>

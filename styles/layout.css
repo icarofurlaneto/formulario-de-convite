@@ -2,14 +2,18 @@
     display: grid;
     grid-template-columns: clamp(320px, 34.375vw, 550px) 1fr;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     border-radius: 20px;
     background-color: var(--shape-background);
+
+
 }
 
 aside {
     height: 100%;
     width: 100%;
+    position: sticky;
+    top: 0;
 
     & .aside-container {
         width: 100%;
@@ -72,12 +76,14 @@ aside {
 }
 
 main {
+    overflow-y: auto;
+    
     & .main-container {
         padding-block: 80px;
         background-color: var(--shape-body);
         border-radius: 12px;
         margin: 1.25rem 1.25rem 1.25rem 0;
-        height: 100vh;
+        min-height: calc(100vh - 2.5rem);
         justify-content: center;
         display: flex;
 
@@ -89,8 +95,6 @@ main {
             width: 560px;
         }
     }
-
-
 }
 
 

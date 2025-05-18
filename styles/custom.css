@@ -1,0 +1,63 @@
+/* Color options styling */
+.color-options {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  margin-top: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  padding-top: 4px; /* Adicionado espaço no topo para evitar corte */
+}
+
+.color-option {
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px; /* Altura explícita para acomodar o crescimento */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.color-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #212427;
+  padding: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.color-button::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: inherit;
+}
+
+/* Hover effect */
+.color-option:hover .color-button {
+  background-color: #383D42;
+  transform: scale(1.05);
+}
+
+/* Selected state */
+.color-option input[type="radio"]:checked + .color-button {
+  transform: scale(1.1);
+  border: 2px solid #59B2FF;
+  box-shadow: 0 0 0 2px rgba(89, 178, 255, 0.2);
+  z-index: 1; /* Garantir que o elemento selecionado fique acima dos outros */
+}
