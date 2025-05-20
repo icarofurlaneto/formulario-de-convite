@@ -18,6 +18,11 @@
     color: var(--text-heading);
 }
 
+.body-xs-red {
+    font: var(--body-xs);
+    color: var(--text-red);
+}
+
 .input-placeholder {
     font: var(--body-md);
     color: var(--input-placeholder);

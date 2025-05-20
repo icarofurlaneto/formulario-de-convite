@@ -4,17 +4,13 @@
     gap: 1.5rem;
 
     & .about-event {
-        grid-column: 1 / -1;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+    margin-block: 1rem;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
         
-        & img {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
+        /* Removed duplicate img styles as they're now handled globally */
         
         & .heading-sm {
             color: var(--text-heading);
@@ -29,11 +25,19 @@ form {
     
 /* Adiciona margem especial para a seção "Detalhes do convite" */
 .section-details {
-    margin: 2.5rem 0 1rem;
+    margin: 3rem 0 1rem;
     grid-column: 1 / -1;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+/* Styling for section icons to match input-placeholder color (#869198) */
+.about-event img,
+.section-details img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: invert(55%) sepia(11%) saturate(339%) hue-rotate(174deg) brightness(88%) contrast(89%); /* Apply --input-placeholder: #869198 color */
 }
 
 /* Elementos que ocupam a largura total */
@@ -378,4 +382,21 @@ input:checked + .slider:before {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1rem;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.error-message {
+    display: flex;
+
+    & img {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    
 }

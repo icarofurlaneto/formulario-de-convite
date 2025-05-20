@@ -9,7 +9,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
-    />    <script src="scripts/theme-toggle.js" defer></script>
+    />
+    <script src="scripts/theme-toggle.js" defer></script>
     <script src="scripts/file-upload.js" defer></script>
     <title>Festivite</title>
   </head>
@@ -358,7 +359,8 @@
                       <span id="mode-text">Escuro</span>
                     </div>
                   </div>
-                </div>                <div class="cover-photo">
+                </div>
+                <div class="cover-photo">
                   <label class="body-sm">Foto de capa</label>
                   <div class="photo-container">
                     <label class="file-input-label">
@@ -367,13 +369,46 @@
                         id="cover-photo"
                         accept="image/*"
                         required
-                      />                      <span class="file-button">
-                        <img src="assets/icons/upload.svg" alt="Upload" class="upload-icon" />
+                      />
+                      <span class="file-button">
+                        <img
+                          src="assets/icons/upload.svg"
+                          alt="Upload"
+                          class="upload-icon"
+                        />
                         <span class="body-sm-color-heading">Selecionar</span>
                       </span>
                     </label>
-                    <span id="file-name" class="body-sm">Nenhum arquivo selecionado</span>
+                    <span id="file-name" class="body-sm"
+                      >Nenhum arquivo selecionado</span
+                    >
                   </div>
+                </div>
+              </div>
+
+              <div class="section-details">
+                <img src="assets/icons/contact.svg" alt="Ícone de Contatos" />
+                <span class="heading-sm">Dados para contato</span>
+              </div>
+
+              <div class="contact input-group">
+                <div class="input-group full-width">
+                  <label class="body-sm">Nome</label>
+                  <input type="text" id="contact-name" placeholder="Nome completo" required />
+                  <div class="error-message">
+                    <img src="assets/icons/circle-alert.svg" alt="Alerta" />
+                    <span class="body-xs-red">Campo obrigatório</span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label class="body-sm">E-mail</label>
+                  <input type="email" id="contact-email" placeholder="exemplo@email.com" />
+                </div>
+
+                <div class="input-group">
+                  <label class="body-sm">Telefone</label>
+                  <input type="tel" id="contact-phone" placeholder="(00) 00000-0000" />
                 </div>
               </div>
 
