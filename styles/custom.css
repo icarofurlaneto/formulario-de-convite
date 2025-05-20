@@ -6,7 +6,8 @@
   margin-top: 8px;
   overflow-x: auto;
   padding-bottom: 12px;
-  padding-top: 4px; /* Adicionado espaço no topo para evitar corte */
+  padding-top: 4px;
+  padding-inline: 0.1rem;
 }
 
 .color-option {

@@ -9,8 +9,13 @@
 }
 
 .body-sm {
-    font: var(--body-md);
+    font: var(--body-sm);
     color: var(--text-body);
+}
+
+.body-sm-color-heading {
+    font: var(--body-sm);
+    color: var(--text-heading);
 }
 
 .input-placeholder {

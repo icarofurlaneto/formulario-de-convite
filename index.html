@@ -9,7 +9,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
-    />
+    />    <script src="scripts/theme-toggle.js" defer></script>
+    <script src="scripts/file-upload.js" defer></script>
     <title>Festivite</title>
   </head>
   <body>
@@ -75,7 +76,7 @@
                           alt="Ícone presencial"
                           class="option-icon"
                         />
-                        <span>Presencial</span>
+                        <span class="body-sm-color-heading">Presencial</span>
                       </span>
                     </label>
                     <label class="option-label">
@@ -86,7 +87,7 @@
                           alt="Ícone online"
                           class="option-icon"
                         />
-                        <span>Online</span>
+                        <span class="body-sm-color-heading">Online</span>
                       </span>
                     </label>
                   </div>
@@ -344,6 +345,38 @@
                   </label>
                 </div>
               </div>
+
+              <div class="group2">
+                <div class="theme-style">
+                  <label class="body-sm">Estilo</label>
+                  <div class="toggle-container">
+                    <label class="switch">
+                      <input type="checkbox" id="styleToggle" />
+                      <span class="slider round"></span>
+                    </label>
+                    <div class="body-sm">
+                      <span id="mode-text">Escuro</span>
+                    </div>
+                  </div>
+                </div>                <div class="cover-photo">
+                  <label class="body-sm">Foto de capa</label>
+                  <div class="photo-container">
+                    <label class="file-input-label">
+                      <input
+                        type="file"
+                        id="cover-photo"
+                        accept="image/*"
+                        required
+                      />                      <span class="file-button">
+                        <img src="assets/icons/upload.svg" alt="Upload" class="upload-icon" />
+                        <span class="body-sm-color-heading">Selecionar</span>
+                      </span>
+                    </label>
+                    <span id="file-name" class="body-sm">Nenhum arquivo selecionado</span>
+                  </div>
+                </div>
+              </div>
+
               <button type="submit" class="full-width">Criar convite</button>
             </form>
           </div>

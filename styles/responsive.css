@@ -22,4 +22,8 @@
     #event-form {
         grid-template-columns: 1fr;
     }
+    
+    .group2 {
+        grid-template-columns: 1fr;
+    }
 }

@@ -29,7 +29,11 @@ form {
     
 /* Adiciona margem especial para a seção "Detalhes do convite" */
 .section-details {
-    margin-top: 2.5rem;
+    margin: 2.5rem 0 1rem;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 /* Elementos que ocupam a largura total */
@@ -244,3 +248,134 @@ button[type="submit"]:hover {
     border-radius: 6px;
 }
 
+.theme-style {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+
+    & label {
+        margin-bottom: 0.75;
+    }
+}
+
+.toggle-container {
+    padding-block: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 32px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    border: 1px solid var(--input-stroke);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--input-base);
+    transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: var(--input-stroke);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Estilo para a seção de foto de capa */
+.cover-photo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.photo-container {
+    padding-block: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.file-input-label {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.file-input-label input[type="file"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.file-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 0.75rem;
+    background-color: var(--shape-button);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.file-button:hover {
+    background-color: var(--shape-hover);
+}
+
+.upload-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    filter: invert(50%) sepia(81%) saturate(1750%) hue-rotate(189deg) brightness(101%) contrast(101%); /* Apply --brand-light: #59B2FF color */
+}
+
+#file-name {
+    color: var(--text-body);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+/* Group for organizing sections */
+.group2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
