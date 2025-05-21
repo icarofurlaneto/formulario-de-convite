@@ -20,7 +20,7 @@
 
 .body-xs-red {
     font: var(--body-xs);
-    color: var(--text-red);
+    color: var(--text-red) !important;
 }
 
 .input-placeholder {

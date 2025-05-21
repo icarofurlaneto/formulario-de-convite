@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"    />
     <script src="scripts/theme-toggle.js" defer></script>
     <script src="scripts/file-upload.js" defer></script>
+    <script src="scripts/form-validation.js" defer></script>
     <title>Festivite</title>
   </head>
   <body>
@@ -49,16 +49,27 @@
                     placeholder="Nome do evento"
                     required
                   />
+                                    <div class="error-message">
+                    <img src="assets/icons/circle-alert.svg" alt="Alerta" />
+                    <span class="body-xs-red">Campo obrigatório</span>
+                  </div>
                 </div>
-
                 <div class="input-group">
                   <label class="body-sm" for="event-date">Início</label>
                   <input type="datetime-local" id="event-date" required />
+                  <div class="error-message">
+                    <img src="assets/icons/circle-alert.svg" alt="Alerta" />
+                    <span class="body-xs-red">Campo obrigatório</span>
+                  </div>
                 </div>
 
                 <div class="input-group">
                   <label class="body-sm" for="event-time">Fim</label>
                   <input type="datetime-local" id="event-time" required />
+                  <div class="error-message">
+                    <img src="assets/icons/circle-alert.svg" alt="Alerta" />
+                    <span class="body-xs-red">Campo obrigatório</span>
+                  </div>
                 </div>
 
                 <div class="input-group">
@@ -99,9 +110,14 @@
                   <input
                     type="text"
                     id="event-host"
-                    placeholder="Link ou endereço"
+                    placeholder="Link ou endereço" required
                   />
+                                    <div class="error-message">
+                    <img src="assets/icons/circle-alert.svg" alt="Alerta" />
+                    <span class="body-xs-red">Campo obrigatório</span>
+                  </div>
                 </div>
+                
 
                 <div class="input-group full-width">
                   <label class="body-sm" for="event-description"
@@ -110,8 +126,12 @@
                   <textarea
                     id="event-description"
                     placeholder="Detalhes adicionais sobre o evento"
-                    rows="3"
+                    rows="3" required
                   ></textarea>
+                                    <div class="error-message">
+                    <img src="assets/icons/circle-alert.svg" alt="Alerta" />
+                    <span class="body-xs-red">Campo obrigatório</span>
+                  </div>
                 </div>
               </div>
 
@@ -358,7 +378,9 @@
                     <div class="body-sm">
                       <span id="mode-text">Escuro</span>
                     </div>
+                    
                   </div>
+                  
                 </div>
                 <div class="cover-photo">
                   <label class="body-sm">Foto de capa</label>
@@ -382,8 +404,14 @@
                     <span id="file-name" class="body-sm"
                       >Nenhum arquivo selecionado</span
                     >
+                    
+                  </div>
+                                    <div class="error-message">
+                    <img src="assets/icons/circle-alert.svg" alt="Alerta" />
+                    <span class="body-xs-red">Campo obrigatório</span>
                   </div>
                 </div>
+                
               </div>
 
               <div class="section-details">
@@ -394,7 +422,12 @@
               <div class="contact input-group">
                 <div class="input-group full-width">
                   <label class="body-sm">Nome</label>
-                  <input type="text" id="contact-name" placeholder="Nome completo" required />
+                  <input
+                    type="text"
+                    id="contact-name"
+                    placeholder="Nome completo"
+                    required
+                  />
                   <div class="error-message">
                     <img src="assets/icons/circle-alert.svg" alt="Alerta" />
                     <span class="body-xs-red">Campo obrigatório</span>
@@ -403,12 +436,30 @@
 
                 <div class="input-group">
                   <label class="body-sm">E-mail</label>
-                  <input type="email" id="contact-email" placeholder="exemplo@email.com" />
+                  <input
+                    type="email"
+                    id="contact-email"
+                    placeholder="exemplo@email.com"
+                    required
+                  />
+                  <div class="error-message">
+                    <img src="assets/icons/circle-alert.svg" alt="Alerta" />
+                    <span class="body-xs-red">Campo obrigatório</span>
+                  </div>
                 </div>
 
                 <div class="input-group">
                   <label class="body-sm">Telefone</label>
-                  <input type="tel" id="contact-phone" placeholder="(00) 00000-0000" />
+                  <input
+                    type="tel"
+                    id="contact-phone"
+                    placeholder="(00) 00000-0000"
+                    required
+                  />
+                  <div class="error-message">
+                    <img src="assets/icons/circle-alert.svg" alt="Alerta" />
+                    <span class="body-xs-red">Campo obrigatório</span>
+                  </div>
                 </div>
               </div>
 

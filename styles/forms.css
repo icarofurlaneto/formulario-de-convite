@@ -392,11 +392,16 @@ input:checked + .slider:before {
 
 .error-message {
     display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
 
     & img {
         width: 1rem;
         height: 1rem;
     }
-
     
+    & .body-xs-red {
+        color: var(--text-red);
+    }
 }
