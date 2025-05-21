@@ -26,4 +26,15 @@
     .group2 {
         grid-template-columns: 1fr;
     }
+      button[type="submit"], .submit-button {
+        width: 100%;
+        position: relative;
+        margin-top: 2rem;
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    .terms-section {
+        padding-bottom: 0;
+    }
 }

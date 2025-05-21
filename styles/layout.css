@@ -79,7 +79,7 @@ main {
     overflow-y: auto;
     
     & .main-container {
-        padding-block: 80px;
+        padding-block: 5rem;
         background-color: var(--shape-body);
         border-radius: 12px;
         margin: 1.25rem 1.25rem 1.25rem 0;

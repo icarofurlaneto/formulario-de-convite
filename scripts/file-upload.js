@@ -7,11 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     fileInput.addEventListener('change', function() {
       if (fileInput.files.length > 0) {
         fileNameDisplay.textContent = fileInput.files[0].name;
-        
-        // Hide error message if present
-        const errorMessage = fileInput.parentElement.parentElement.parentElement.querySelector('.error-message');
+          // Hide error message if present
+        const errorMessage = fileInput.closest('.cover-photo')?.querySelector('.error-message');
         if (errorMessage) {
-          errorMessage.style.display = 'none';
+          errorMessage.classList.remove('show');
         }
       } else {
         fileNameDisplay.textContent = 'Nenhum arquivo selecionado';

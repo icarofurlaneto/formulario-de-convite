@@ -178,9 +178,9 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     min-height: 100px;
 }
 
-button[type="submit"] {
-    margin-top: 1rem;
-    padding: 1rem;
+button[type="submit"], .submit-button {
+    width: 11rem;
+    padding: 0.875rem 1rem;
     background-color: #6c63ff;        
     color: white;
     border: none;
@@ -189,11 +189,38 @@ button[type="submit"] {
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    /* Alinhamento dos elementos do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover, .submit-button:hover {
     background-color: #5a52e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para o ícone dentro do botão submit */
+.submit-button img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Garante que o ícone seja branco */
+    flex-shrink: 0; /* Evita que o ícone encolha */
+    vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+
+/* Estilo para o texto dentro do botão submit */
+.submit-button span {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .grid-theme {
@@ -388,10 +415,11 @@ input:checked + .slider:before {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    padding-bottom: 3rem;
 }
 
 .error-message {
-    display: flex;
+    display: none;  /* Escondido por padrão */
     align-items: center;
     gap: 0.25rem;
     margin-top: 0.25rem;
@@ -400,8 +428,111 @@ input:checked + .slider:before {
         width: 1rem;
         height: 1rem;
     }
-    
-    & .body-xs-red {
+      & .body-xs-red {
         color: var(--text-red);
     }
+}
+
+/* Quando a classe .show é adicionada, exibe a mensagem de erro */
+.error-message.show {
+    display: flex;
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Faz com que a mensagem de erro do campo de nome de contato seja visível por padrão */
+#contact-name + .error-message {
+    display: flex;
+}
+
+/* Animação de shake para as mensagens de erro */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+/* Estilos para a seção de termos e condições */
+.terms-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: 2.5rem 5rem;
+    border-top: 1px solid var(--input-stroke);
+    position: relative;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Estilo para o container do checkbox customizado */
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.5;
+}
+
+/* Esconde o checkbox padrão */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Cria o checkbox customizado */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* Quando o checkbox está marcado, muda o fundo */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--brand-light);
+    border-color: var(--brand-light);
+}
+
+/* Cria o indicador de checked (o símbolo ✓) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Mostra o indicador quando checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Estilo para links nos termos */
+.link-text {
+    color: var(--brand-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.link-text:hover {
+    text-decoration: underline;
 }
