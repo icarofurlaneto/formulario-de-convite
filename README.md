@@ -1,5 +1,7 @@
 # Formulário de Convite
 
+![Screenshot 2025-05-21 132502](https://github.com/user-attachments/assets/ab8d3e31-d3c4-48fe-9314-51157dbb35ad)
+
 [![GitHub Pages](https://img.shields.io/badge/Ver%20Online-formulario--de--convite-brightgreen)](https://icarofurlaneto.github.io/formulario-de-convite/)
 
 O **Formulário de Convite** é uma aplicação web simples para gerar convites digitais de forma rápida, prática e personalizada. Com uma interface intuitiva, o usuário pode preencher os dados do evento e obter um convite estilizado, pronto para compartilhar.
