@@ -1,10 +1,9 @@
 /* Color options styling */
 .color-options {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 12px;
   margin-top: 8px;
-  overflow-x: auto;
   padding-bottom: 12px;
   padding-top: 4px;
   padding-inline: 0.1rem;
@@ -15,10 +14,23 @@
   cursor: pointer;
   flex-shrink: 0;
   width: 40px;
-  height: 40px; /* Altura explícita para acomodar o crescimento */
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Responsive adjustments for color options */
+@media (max-width: 390px) {
+  .color-options {
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .color-option {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .color-option input[type="radio"] {

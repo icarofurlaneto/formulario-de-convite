@@ -35,8 +35,7 @@ aside {
         border-radius: 12px;
         z-index: 1;
     }
-    
-    & header {
+      & header {
         position: absolute;
         z-index: 2;
         top: 3.25rem;
@@ -48,6 +47,15 @@ aside {
     & h1, & span {
         position: relative;
         z-index: 2;
+    }
+    
+    & h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        line-height: 1.2;
+    }
+    
+    & span {
+        font-size: clamp(0.875rem, 2vw, 1rem);
     }
     
     & .logo {
@@ -88,11 +96,13 @@ main {
         display: flex;
 
         & h2 {
-            margin-bottom: 40px;
+            margin-bottom: clamp(24px, 5vw, 40px);
         }
 
         & .main-content {
-            width: 560px;
+            width: 100%;
+            max-width: 560px;
+            padding: 0 1rem;
         }
     }
 }

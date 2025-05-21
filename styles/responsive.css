@@ -1,40 +1,396 @@
-/* Media queries para controlar os limites do aside */
-@media (max-width: 768px) {
-    #app {
-        grid-template-columns: 1fr;
-        grid-template-rows: 100vh auto;
-        height: auto;
-        overflow: auto;
-    }
-    
-    aside {
-        min-height: 100vh;
-        height: 100vh;
-    }
-    
-    main {
-        margin-top: 2rem;
-    }
+/* Breakpoint para tablets e dispositivos menores */
+@media (max-width: 1024px) {
+  #app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+    overflow: auto;
+  }
+
+  aside {
+    position: relative;
+    min-height: 50vh;
+    height: auto;
+  }
+
+  aside .background {
+    height: 100%;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  main .main-container {
+    margin: 1.25rem;
+    padding-block: 3rem;
+  }
+
+  main .main-container .main-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 1rem;
+  }
+
+  .grid-theme {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+    .checkbox-group:last-of-type {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Media query para dispositivos móveis */
 @media (max-width: 768px) {
-    #event-form {
-        grid-template-columns: 1fr;
-    }
-    
-    .group2 {
-        grid-template-columns: 1fr;
-    }
-      button[type="submit"], .submit-button {
-        width: 100%;
-        position: relative;
-        margin-top: 2rem;
-        justify-content: center;
-        padding: 1rem;
-    }
-    
-    .terms-section {
-        padding-bottom: 0;
-    }
+  aside {
+    min-height: 40vh;
+  }
+
+  aside header {
+    top: 2rem;
+    left: 2rem;
+    max-width: calc(100% - 3rem);
+  }
+
+  #event-form {
+    grid-template-columns: 1fr;
+  }
+
+  .group2 {
+    grid-template-columns: 1fr;
+  }
+  .contact {
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+    gap: 1.25rem;
+  }
+
+  .color-options {
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+  }
+
+  .grid-theme {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  button[type="submit"],
+  .submit-button {
+    width: 80%;
+    position: relative;
+    margin: 3rem auto 1rem;
+    justify-content: center;
+    padding: 0.875rem 1rem;
+    min-height: 48px;
+    right: auto;
+    bottom: auto;
+  }
+
+  .terms-section {
+    padding-bottom: 1rem;
+    gap: 1.25rem;
+    padding-block: 2rem 5rem;
+  }
+
+  .input-group {
+    gap: 0.25rem;
+  }
+
+  .toggle-options {
+    flex-direction: column;
+  }
+
+  .toggle-options .option-label {
+    width: 100%;
+  }
+
+    .checkbox-group:last-of-type {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Media query para dispositivos móveis muito pequenos */
+@media (max-width: 480px) {
+  aside {
+    min-height: 30vh;
+  }
+
+  aside header {
+    top: 1.5rem;
+    left: 1.5rem;
+    max-width: calc(100% - 2rem);
+  }
+
+  aside .background {
+    top: 0.75rem;
+    left: 0.75rem;
+    height: calc(100% - 1.5rem);
+    width: calc(100% - 1.5rem);
+  }
+
+  main .main-container {
+    padding-block: 2rem;
+    margin: 1rem;
+  }
+
+  .grid-theme {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .theme-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  .photo-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .file-input-label {
+    width: 100%;
+  }
+
+  .file-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    min-height: 48px;
+  }
+
+  .file-button .body-sm-color-heading {
+    font-size: 0.95rem;
+  }
+
+  #file-name {
+    margin-top: 0.5rem;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 0.25rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .cover-photo {
+    margin-top: 1.5rem;
+  }
+
+  .main-content h2 {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+  }
+
+  .theme-fest label,
+  .input-group label {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+  }
+
+  .checkbox-container {
+    padding-left: 1.75rem;
+  }
+  .checkbox-container .checkmark {
+    height: 1.125rem;
+    width: 1.125rem;
+  }
+
+    .checkbox-group:last-of-type {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Media query específica para iPhone 12 Pro (390x844) e dispositivos similares */
+@media (max-width: 414px) {
+  aside {
+    min-height: 22vh;
+    max-height: 22vh; /* Limita altura do cabeçalho para deixar mais espaço para o formulário */
+    overflow: hidden;
+  }
+
+  aside header {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  aside header h1 {
+    font-size: 2rem;
+  }
+
+  aside header span {
+    font-size: 0.85rem;
+  }
+  main .main-container {
+    padding-block: 1.25rem;
+    padding-top: 1rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+  }
+
+  main .main-container .main-content {
+    padding: 0 0.75rem;
+    max-width: 100%;
+  }
+
+  main .main-container h2 {
+    margin-bottom: 1.25rem;
+    font-size: 1.75rem;
+  }
+
+  .about-event,
+  .section-details {
+    margin: 1.5rem 0 0.75rem;
+  }
+
+  .input-group {
+    margin-bottom: 0.25rem;
+  }
+  .grid-theme {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    row-gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-item span {
+    font-size: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .color-options {
+    justify-content: center;
+  }
+
+  /* Ajusta os espaços nos checkboxes */
+  .checkbox-group {
+    margin-bottom: 1rem;
+  }
+
+  .checkbox-group:last-of-type {
+    margin-bottom: 1.5rem;
+  }
+  /* Melhora os tamanhos dos inputs */
+  input,
+  textarea,
+  select {
+    padding: 0.75rem !important;
+    font-size: 0.95rem !important;
+    min-height: 48px;
+    border-radius: 6px !important;
+  }
+
+  /* Melhora o tamanho dos ícones */
+  .about-event img,
+  .section-details img {
+    width: 1.25rem;
+    height: 1.25rem;
+  } /* Melhora os botões */
+  button[type="submit"],
+  .submit-button {
+    padding: 0.75rem;
+    width: 90%;
+    margin: 3rem auto 1.5rem;
+    height: auto;
+    min-height: 48px; /* Altura mínima para ser tocável em interfaces touch */
+    font-size: 0.95rem;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  } /* Ajusta o espaçamento vertical */
+  .terms-section {
+    padding-block: 2rem 6rem;
+    gap: 1.5rem;
+    position: relative;
+    margin-bottom: 0;
+  } /* Ajusta espaçamento do formulário */
+  #event-form {
+    gap: 1.25rem;
+  }
+
+  form {
+    gap: 1.25rem;
+  }
+
+  .section-details {
+    margin: 2rem 0 1rem; /* Aumenta o espaçamento entre seções */
+  }
+
+  /* Melhora o comportamento de rolagem para o iPhone 12 Pro */
+  html,
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Ajusta selectors para funcionarem melhor em iPhone */
+  .option-item {
+    padding: 0.625rem;
+  }
+  /* Melhora visibilidade dos labels de checkbox */
+  .checkbox-container span {
+    font-size: 0.875rem;
+    line-height: 1.3;
+  }
+  .checkbox-container {
+    padding-left: 1.75rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+  }
+
+  .checkbox-container .checkmark {
+    height: 1.125rem;
+    width: 1.125rem;
+    top: 0.375rem;
+  }
+
+  .checkbox-group {
+    margin-bottom: 1rem;
+  }
+
+  .checkbox-group:last-of-type {
+    margin-bottom: 4rem;
+  }
+
+  /* Ajusta textos de links */
+  .link-text {
+    display: inline-block;
+  }
+
+  /* Melhora os tamanhos dos erros */
+  .error-message {
+    margin-top: 0.2rem;
+  }
+
+  .error-message img {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  /* Ajusta o visual para telas menores */
+  #app {
+    border-radius: 0;
+  }
+
+  /* Adiciona respiro em seções específicas */
+  .section-details + .input-group,
+  .about-event + .input-group {
+    margin-top: 0.5rem;
+  }
+
+  .group2 {
+    margin-bottom: 1rem;
+  }
+
+  /* Garante que o formulário tenha quebras visuais claras */
+  .theme-style,
+  .cover-photo {
+    border-top: 1px solid var(--input-stroke);
+    border-bottom: 1px solid var(--input-stroke);
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
 }
